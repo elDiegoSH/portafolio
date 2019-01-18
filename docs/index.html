@@ -125,10 +125,10 @@
   			<h3 class="titulo">Contacto <i class="fa fa-envelope-o"></i></h3>
   			<form class="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
   				<input type="text" name="nombre" placeholder="Nombre" 
-          value="<?php if(!$enviado && isset($nombre)) echo $nombre ?>">
+          value="<?php if(!$enviado && isset($nombre)) echo $nombre ?>" disabled>
   				<input type="email" name="correo" placeholder="Correo" 
-          value="<?php if(!$enviado && isset($correo)) echo $correo ?>">
-  				<textarea name="mensaje" placeholder="Mensaje" id="mensaje"><?php if(!$enviado && isset($mensaje)) echo $mensaje ?></textarea>
+          value="<?php if(!$enviado && isset($correo)) echo $correo ?>" disabled>
+  				<textarea name="mensaje" placeholder="Mensaje" id="mensaje" disabled><?php if(!$enviado && isset($mensaje)) echo $mensaje ?></textarea>
 
             <?php if (!empty($errores)): ?>
             <div class="alert error">
